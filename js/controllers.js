@@ -76,7 +76,6 @@ controller('Demo', ['$scope', '$rootScope', '$timeout', function($scope, $rootSc
 		var photos = [];
 		
 		$scope.streams.forEach(function(stream, i) {
-			console.log(stream.id)
 			if (!!stream.id) {
 				photos.push(stream.getImgData());
 			} else {
