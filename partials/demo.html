@@ -1,0 +1,16 @@
+<label>
+	Number of Photos
+	<input type="number" ng-model="numPhotos" />
+</label>
+
+
+<button ng-click="startPhotoBooth()">Take some photos!</button>
+<div class="instructions">
+	{{instructions}}
+</div>
+<br>
+<div class="photostrip">
+	<div class="photoset" ng-repeat="photoset in photos">
+		<img ng-repeat="photo in photoset" ng-src="data:image/png;base64,{{photo}}" />
+	</div>
+</div>
